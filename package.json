@@ -1,0 +1,27 @@
+{
+  "name": "telzir-servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerdon/telzir-servidor.git"
+  },
+  "author": "Gerdon Mafra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "restify": "^7.3.0"
+  },
+  "engines": {
+    "node": "8.11.4"
+  },
+  "bugs": {
+    "url": "https://github.com/gerdon/telzir-servidor/issues"
+  },
+  "homepage": "https://github.com/gerdon/telzir-servidor#readme"
+}
