@@ -1,38 +1,79 @@
+<!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">        
+
         <title>Calcular Valor da Ligação</title>
     </head>
     <body>
-        <h1>Valor da Ligação</h1>
+        <div class="padding">
+            <nav class="navbar navbar-dark bg-dark">
+                <span class="navbar-brand mb-0 h1">Telzir</span>
+            </nav>
+            <br>
+            <div class="row justify-content-md-center">
+                <div class="col-md-8">
+                    <h1>Calcular o valor da ligação</h1>
+                    <br>
+                    <form action="/calcularLigacao" method="post">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="origem">Origem</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="origem" name="origem">
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                </select>
+                            </div>
+                        </div>
 
-        <form action="/calcularLigacao" method="post">
-            <label for="origem">Origem</label>
-            <select id="origem" name="origem">
-                <option value="011">011</option>
-                <option value="016">016</option>
-                <option value="017">017</option>
-                <option value="018">018</option>
-            </select>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="destino">Destino</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="destino" name="destino">
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                </select>
+                            </div>
+                        </div>
 
-            <label for="destino">Destino</label>
-            <select id="destino" name="destino">
-                <option value="011">011</option>
-                <option value="016">016</option>
-                <option value="017">017</option>
-                <option value="018">018</option>
-            </select>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="tempo">tempo</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="tempo" type="number" name="tempo">
+                            </div>
+                        </div>
 
-            <label for="tempo">tempo</label>
-            <input id="tempo" type="text" name="tempo">
-
-            <label for="plano">Plano</label>
-            <select id="plano" name="plano">
-                <option value="30">FaleMais 30</option>
-                <option value="60">FaleMais 60</option>
-                <option value="120">FaleMais 120</option>
-            </select>
-
-            <input type="submit" value="Calcular">
-        </form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="plano">Plano</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="plano" name="plano">
+                                    <option value="30">FaleMais 30</option>
+                                    <option value="60">FaleMais 60</option>
+                                    <option value="120">FaleMais 120</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <input type="submit" class="btn btn-primary" value="Calcular" >
+                    </form>
+                </div>
+            </div>
+        </div>  
+        <div class="fixed-bottom">
+            <p class="text-center text-muted">
+                Telzir 2019
+            </p>
+        </div>  
+    <!-- Optional JavaScript -->
+    <!-- then Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
 </html>
