@@ -9,7 +9,10 @@ router.post('/calcularLigacao', (req, res) => {
         req.body.tempo, 
         req.body.plano
     );
-    res.send(valorCalculado);
+    res.send(
+        `<p>Valor com o plano: ${ valorCalculado.valorComPlano } </p>` +
+        `<p>Valor sem o plano: ${ valorCalculado.valorSemPlano } </p>`
+    );
 });
 
 router.get('/calcularLigacao', (req, res) => {

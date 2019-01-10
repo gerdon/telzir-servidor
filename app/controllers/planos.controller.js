@@ -71,9 +71,14 @@ function calcularLigacao(origem, destino, tempo, plano) {
     }
 
     return {
-        "valorComPlano": valorComPlano,
-        "valorSemPlano": valorSemPlano
+        "valorComPlano": inteiroParaMoeda(valorComPlano),
+        "valorSemPlano": inteiroParaMoeda(valorSemPlano)
     };
+}
+
+function inteiroParaMoeda(valorInteiro){
+    var formatado = "R$ " + valorInteiro.toFixed(2).replace(".",",");
+    return formatado;
 }
 
 module.exports = {calcularLigacao};
