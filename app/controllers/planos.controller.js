@@ -17,6 +17,10 @@ function calcularLigacao(origem, destino, tempo, plano) {
     valorComPlano = 0;
     valorSemPlano = 0;
 
+    if(parseInt(tempo) < 0) {
+        return "Valor de tempo negativo, insira um valor válido!";
+    }
+
     switch (localizacao) {
         case '011016':
             valorMinuto = 1.90;
