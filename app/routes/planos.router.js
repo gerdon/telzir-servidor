@@ -1,5 +1,6 @@
 const router = require('../../config/server').server;
 const planos = require('../controllers/planos.controller');
+const path = require('path');
 
 router.post('/calcularLigacao', (req, res) => {
     let valorCalculado = planos.calcularLigacao(
@@ -9,6 +10,10 @@ router.post('/calcularLigacao', (req, res) => {
         req.body.plano
     );
     res.send(valorCalculado);
+});
+
+router.get('/calcularLigacao', (req, res) => {
+    res.sendFile(path.join(__dirname, '../views', 'calcularPlano.view.html'));
 });
 
 module.exports = router;

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Calcular Valor da Ligação</title>
+    </head>
+    <body>
+        <h1>Valor da Ligação</h1>
+
+        <form action="/calcularLigacao" method="post">
+            <label for="origem">Origem</label>
+            <select id="origem" name="origem">
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+            </select>
+
+            <label for="destino">Destino</label>
+            <select id="destino" name="destino">
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+            </select>
+
+            <label for="tempo">tempo</label>
+            <input id="tempo" type="text" name="tempo">
+
+            <label for="plano">Plano</label>
+            <select id="plano" name="plano">
+                <option value="30">FaleMais 30</option>
+                <option value="60">FaleMais 60</option>
+                <option value="120">FaleMais 120</option>
+            </select>
+
+            <input type="submit" value="Calcular">
+        </form>
+    </body>
+</html>
