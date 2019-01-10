@@ -28,3 +28,7 @@ A API estará ativa em:
 Para executar os testes unitários execute o script no terminal:
 
 > `npm run test`
+
+## Acessando o serviço via Heroku
+
+> `https://telzir-operadora.herokuapp.com/`
